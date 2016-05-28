@@ -1,0 +1,14 @@
+package farmacia.jdbc;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import farmacia.jdbc.ConnectionFactory;
+
+public class Conexao {
+	public static void main(String[] args) throws SQLException {
+		Connection connection = new ConnectionFactory().getConnection();
+		System.out.println("Conexão aberta!");
+		connection.close();
+	}
+}
