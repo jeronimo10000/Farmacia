@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS `farmacia`.`clientes` (
   `idclientes` INT NOT NULL,
   `cpfCliente` INT NOT NULL,
   `nomeCliente` VARCHAR(250) NOT NULL,
-  `cpfCliente` INT NOT NULL,
   `enderecoCliente` VARCHAR(250) NOT NULL,
   `telefoneCliente` INT NOT NULL,
   PRIMARY KEY (`idclientes`))
