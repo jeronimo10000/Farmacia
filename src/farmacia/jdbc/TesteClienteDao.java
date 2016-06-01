@@ -34,47 +34,52 @@ public class TesteClienteDao {
 //		
 //		System.out.println("Gravado!");
 		
-		Scanner atualizar = new Scanner(System.in);
-		
-		System.out.println("Atualizar Cliente!");
-		System.out.println("Digite o cpf: ");
-		String cpf = atualizar.nextLine();
-		System.out.println("Digite o nome: ");
-		String nome = atualizar.nextLine();
-		System.out.println("Digite o endereço: ");
-		String endereco = atualizar.nextLine();
-		System.out.println("Digite o telefone: ");
-		String telefone = atualizar.nextLine();
-		System.out.println("Digite o código do Cliente");
-		int id = atualizar.nextInt();
-		
-		// pronto para atualizar
-		Clientes cliente = new Clientes();
-		cliente.setId(0);
-		cliente.setCpf(cpf);
-		cliente.setNome(nome);
-		cliente.setEndereco(endereco);
-		cliente.setTelefone(telefone);
-		cliente.setId(id);
-
-		// grave nessa conexão!!!
-		ClientesDao dao = new ClientesDao();
-
-		// método elegante 
-		dao.atualizar(cliente);
-
-		System.out.println("Atualizado!");
-		
-		
-//		//pronto para remover
-//		Clientes cliente = new Clientes();
-//		cliente.setId(2);
+//		Scanner atualizar = new Scanner(System.in);
 //		
+//		System.out.println("Atualizar Cliente!");
+//		System.out.println("Digite o cpf: ");
+//		String cpf = atualizar.nextLine();
+//		System.out.println("Digite o nome: ");
+//		String nome = atualizar.nextLine();
+//		System.out.println("Digite o endereço: ");
+//		String endereco = atualizar.nextLine();
+//		System.out.println("Digite o telefone: ");
+//		String telefone = atualizar.nextLine();
+//		System.out.println("Digite o código do Cliente");
+//		int id = atualizar.nextInt();
+//		
+//		// pronto para atualizar
+//		Clientes cliente = new Clientes();
+//		cliente.setId(0);
+//		cliente.setCpf(cpf);
+//		cliente.setNome(nome);
+//		cliente.setEndereco(endereco);
+//		cliente.setTelefone(telefone);
+//		cliente.setId(id);
+//
 //		// grave nessa conexão!!!
 //		ClientesDao dao = new ClientesDao();
-//		
-//		dao.remover(cliente);
-//		
-//		System.out.println("Removido!");
+//
+//		// método elegante 
+//		dao.atualizar(cliente);
+//
+//		System.out.println("Atualizado!");
+		
+		Scanner remover = new Scanner(System.in);
+		System.out.println("Remover Cliente");
+		System.out.println("Digite o código do cliente para remover");
+		int id = remover.nextInt();
+		
+		//pronto para remover
+		
+		Clientes cliente = new Clientes();
+		cliente.setId(id);
+		
+		// grave nessa conexão!!!
+		ClientesDao dao = new ClientesDao();
+		
+		dao.remover(cliente);
+		
+		System.out.println("Removido!");
 	}
 }
