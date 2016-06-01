@@ -24,7 +24,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `farmacia`.`clientes` (
   `idclientes` INT NOT NULL,
-  `cpfCliente` INT NOT NULL,
+  `cpfCliente` VARCHAR (14) NOT NULL,
   `nomeCliente` VARCHAR(250) NOT NULL,
   `enderecoCliente` VARCHAR(250) NOT NULL,
   `telefoneCliente` INT NOT NULL,
