@@ -8,16 +8,16 @@ import farmacia.model.Clientes;
 public class TesteClienteDao {
 	public static void main(String[] args) {
 		
-		Scanner ler = new Scanner(System.in);
+		Scanner gravar = new Scanner(System.in);
 		
 		System.out.println("Digite o cpf: ");
-		String cpf = ler.next();
+		String cpf = gravar.nextLine();
 		System.out.println("Digite o nome: ");
-		String nome = ler.next();
+		String nome = gravar.nextLine();
 		System.out.println("Digite o endereço: ");
-		String endereco = ler.next();
+		String endereco = gravar.nextLine();
 		System.out.println("Digite o telefone: ");
-		String telefone = ler.next();
+		String telefone = gravar.nextLine();
 		
 		// pronto para gravar
 		Clientes cliente = new Clientes();
